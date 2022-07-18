@@ -1,4 +1,4 @@
-package org.example;
+package org.container.with.most.water;
 
 /**
  * Hello world!
