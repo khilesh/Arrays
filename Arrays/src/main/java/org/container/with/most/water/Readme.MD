@@ -13,4 +13,5 @@ In this case, the max area of water (blue section) the container can contain is 
 
 Input: height = [1,1]
 Output: 1
+<img width="609" alt="Screen Shot 2022-07-18 at 16 02 48" src="https://user-images.githubusercontent.com/3914357/179631272-c9aa9214-ff8c-4f5a-a322-1dc4d31cab77.png">
 
