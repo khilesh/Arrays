@@ -1,6 +1,6 @@
 package org.container.with.most.water;
 
-public class Solution {
+public class SolutionBruteForce {
 
     public static int maxWater(int [] height){
         // intialize max to 0;
