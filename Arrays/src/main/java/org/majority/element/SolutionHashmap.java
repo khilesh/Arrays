@@ -1,29 +1,37 @@
 package org.majority.element;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class SolutionHashmap {
 
-    public static int findMajorityElement(int[] input ){
-        HashMap<Integer, Integer> hashOfInput = new HashMap<Integer, Integer>();
+private static Map<Integer, Integer> countNums(int[] nums){
+    Map<Integer, Integer> counts = new HashMap<Integer, Integer>();
 
-        for(int pointer1: input){
-            int counter = 0;
-            for(int pointer2: input){
-                if(pointer2 == pointer1){
-                    counter+=1;
-                }}
-            hashOfInput.put(pointer1, counter);
+    for (int num: nums){
+        if(!counts.containsKey(num)){ counts.put(num,1);}
+        else { counts.put(num, counts.get(num) +1);}
+    }
+return counts;
+}
+
+public static int majorityElement(int [] nums){
+    Map<Integer, Integer> counts = countNums(nums);
+
+    Map.Entry<Integer, Integer>  majorityEntry =null;
+
+    for(Map.Entry<Integer, Integer> entry : counts.entrySet()){
+        if(majorityEntry == null || entry.getValue() > majorityEntry.getValue()){
+            majorityEntry = entry;
         }
-
-
-        return -1;
     }
+return majorityEntry.getKey();
+}
 
-    public static void  main(String[] args){
+public static void main(String [] args){
+    System.out.println("Hello world ");
 
-        int[] inputArray = {01,1,2,3,3,4,4,4,5,6,3,1,2};
-        System.out.println("Hello World ::" +findMajorityElement(inputArray));
-
-    }
+    int[] input1 = {1,2,3,4,5,5,6,5};
+    System.out.println("Hello world2 ::  " + majorityElement(input1) );
+}
 }
