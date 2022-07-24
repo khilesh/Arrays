@@ -29,6 +29,7 @@ return majorityEntry.getKey();
 }
 
 public static void main(String [] args){
+    
     System.out.println("Hello world ");
 
     int[] input1 = {1,2,3,4,5,5,6,5};
