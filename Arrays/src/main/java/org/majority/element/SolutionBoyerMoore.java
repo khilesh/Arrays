@@ -21,6 +21,9 @@ public static void main(String[] args) {
 	System.out.println("Hello world ");
 	
 	int[] input1 = {1, 2, 3, 4, 5, 5, 6, 5};
-	System.out.println("Hello world2 ::  " + majorityElement(input1));
+	int[] input2 = {1, 2, 3 };
+	System.out.println("Hello world Input1 ::  " + majorityElement(input1));
+	System.out.println("Hello world Input2 ::  " + majorityElement(input2));
+	
 }
 }
