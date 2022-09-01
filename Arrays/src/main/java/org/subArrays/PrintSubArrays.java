@@ -5,15 +5,24 @@ public class PrintSubArrays {
 
 static int subArrays(int[] input){
 	int counter =0;
-	
+	/**
 	for (int i =0 ; i < input.length; i++){ //left index
 		for (int j= i; j < input.length; j++) {// right index
-			 for (int k =i; k<=j; k++)
-			 { System.out.println("SubArrays " +"i :"+i + " j :" + j + " k : " +k + " "+ input[k]);}
+			 for (int k =i; k<=j; k++)   {
+				 System.out.println("SubArrays " +"i :"+i + " j :" + j + " k : " +k + " "+ input[k]);
+			                            }
 				 counter ++;
+											}
+								} */
+	for (int i = 0; i < input.length; i++) {
+		for (int j = i; j < input.length; j++) {
+			for (int k = i; k <= j; k++) {
+				System.out.print(input[k] + "	");
+			}
+			System.out.println();
+			counter ++;
 		}
 	}
-	
 	System.out.println("Counter " + counter );
 	
 	return -1;
